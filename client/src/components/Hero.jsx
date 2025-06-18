@@ -10,9 +10,10 @@ const Hero = () => {
   let [sortOrder, setSortOrder] = useState("");
 
   useEffect(() => {
-    fetch("https://your-app.onrender.com/api/products")
+    fetch("https://appscrip-tqk9.onrender.com/api/products")
       .then((res) => res.json())
       .then((data) => setProduct(data));
+      console.log(sortOrder)
   }, []);
 
   let toggleSidebar = () => {
