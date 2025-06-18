@@ -3,10 +3,10 @@ import InstaIcon  from "../assets/insta.svg";
 import linkdin from "../assets/in.svg";
 import Gpay from "../assets/pay.svg";
 import card from "../assets/masterCard.svg";
-import payPal from "../assets/paypal.svg";
+import paypal from "../assets/paypal.svg";
 import amex from "../assets/amexPay.svg";
 import apple from "../assets/iPay.svg";
-import shopPay from "../assets/shopPay.svg";
+import shoppay from "../assets/shopPay.svg";
 import "./footer.css";
 import { MdKeyboardArrowDown } from "react-icons/md";
 
@@ -83,9 +83,9 @@ const Footer = () => {
               <img src={Gpay} alt="Google Pay" />
               <img src={card} alt="Master Pay" />
               <img src={apple} alt="Apple Pay" />
-              <img src={payPal} alt="PayPal" />
+              <img src={paypal} alt="PayPal" />
               <img src={amex} alt="Amex Pay" />
-              <img src={shopPay} alt="Shop Pay" />
+              <img src={shoppay} alt="Shop Pay" />
             </div>
           </div>
         </div>
