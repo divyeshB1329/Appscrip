@@ -1,5 +1,5 @@
 import UsIcon from "../assets/UsIcon.svg";
-import insta from "../assets/insta.svg";
+import InstaIcon  from "../assets/insta.svg";
 import linkdin from "../assets/in.svg";
 import Gpay from "../assets/pay.svg";
 import card from "../assets/masterCard.svg";
@@ -47,7 +47,7 @@ const Footer = () => {
           <div className="bottomLeftFoot item-center">
             <div className="innerLeftFoot">
               <h3>mettā muse</h3>
-              <MdKeyboardArrowDown className="footDownArrow"/>
+              <MdKeyboardArrowDown className="footDownArrow" />
               <ul>
                 <li>About Us</li>
                 <li>Stories</li>
@@ -59,7 +59,7 @@ const Footer = () => {
             </div>
             <div className="innerRightFoot">
               <h3>Quick Links</h3>
-              <MdKeyboardArrowDown className="footDownArrow"/>
+              <MdKeyboardArrowDown className="footDownArrow" />
               <ul>
                 <li>Orders & Shipping</li>
                 <li>Join/Login as a Seller</li>
@@ -74,8 +74,8 @@ const Footer = () => {
           <div className="bottomRightFoot">
             <div className="instaLink">
               <h3>FOLLOW US</h3>
-              <MdKeyboardArrowDown className="footDownArrow"/>
-              <img src={insta} alt="instagram" />
+              <MdKeyboardArrowDown className="footDownArrow" />
+              <img src={InstaIcon} alt="instagram" />
               <img src={linkdin} alt="linkdin" />
             </div>
             <div className="paymentImg">
