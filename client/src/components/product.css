@@ -1,0 +1,98 @@
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start !important;
+  flex: 3.3;
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.card,
+.widhoutFilter {
+  height: 100%;
+  flex-direction: column;
+  justify-content: start;
+  border: 2px solid rgba(128, 128, 128, 0.156);
+  border-radius: 4px;
+  padding: 10px;
+}
+
+.card {
+  width: 30%;
+}
+
+.widhoutFilter {
+  width: 22.3%;
+}
+
+.card > img,
+.widhoutFilter > img {
+  width: 150px;
+  height: 275px;
+  object-fit: contain;
+  padding-top: 25px;
+}
+
+.card > div,
+.widhoutFilter > div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding-top: 15px;
+}
+
+.card > div > h2,
+.widhoutFilter > div > h2 {
+  font-size: 18px;
+}
+
+.card > div > div,
+.widhoutFilter > div > div {
+  width: 100%;
+  justify-content: space-between;
+}
+
+.card div p,
+.widhoutFilter div p {
+  font-size: 13px;
+  margin-right: 10px;
+}
+
+.card div p span,
+.widhoutFilter div p span {
+  text-decoration: underline;
+}
+
+@media (max-width: 850px) {
+  .card {
+    width: 46.4%;
+  }
+  .widhoutFilter {
+    width: 46.6%;
+  }
+}
+
+@media (max-width: 450px) {
+  .products {
+    gap: 19px;
+  }
+
+  .card img {
+    width: 100px;
+    height: 130px;
+  }
+
+  .card > div > h2 {
+    font-size: 15px;
+  }
+
+  .card > div > div > p {
+    font-size: 9px;
+  }
+
+  .card > div > div > img {
+    width: 20px;
+    height: 15px;
+  }
+}

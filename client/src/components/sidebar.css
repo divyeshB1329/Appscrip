@@ -1,0 +1,77 @@
+aside {
+  flex: 1;
+}
+
+.sideBar {
+  justify-content: start;
+  padding: 25px 0;
+  border-bottom: 2px solid #e5e5e5;
+}
+
+.custom-checkbox {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  font-size: 16px;
+  gap: 8px;
+}
+
+.custom-checkbox input[type="checkbox"] {
+  display: none;
+}
+
+.custom-checkbox .checkmark {
+  width: 18px;
+  height: 18px;
+  border: 1.5px solid #333;
+  position: relative;
+  top: -3px;
+}
+
+.custom-checkbox input:checked + .checkmark::after {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 0;
+  width: 6px;
+  height: 12px;
+  border: solid #333;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.sideBar2ndPart {
+  padding: 20px 0;
+  border-bottom: 2px solid #e5e5e5;
+}
+
+.customizeOption {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+}
+
+.downArrow {
+  font-size: 150%;
+  color: #0000009f;
+  cursor: pointer;
+}
+
+.sideBarFilter p {
+  padding: 20px 0;
+}
+
+.sideBarFilter div {
+  padding-bottom: 15px;
+}
+
+.filterOption label {
+  padding-left: 10px;
+}
+
+@media (max-width: 650px) {
+  aside {
+    display: none;
+  }
+}

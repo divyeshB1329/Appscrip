@@ -1,0 +1,12 @@
+.mainSec {
+  width: 100%;
+  height: auto;
+  flex-direction: column;
+}
+
+.sideNproductSec{
+  align-items: start;
+  border: none;
+  padding: 0;
+  gap: 20px;
+}

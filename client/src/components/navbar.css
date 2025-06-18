@@ -1,0 +1,152 @@
+.main-section {
+  background-color: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 0.4%;
+  color: #eb4c6b;
+}
+
+.iconAndInfo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 100%;
+  font-weight: 400;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.icon {
+  font-size: 22px;
+}
+
+.topPart {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 110%;
+  padding: 2.5%;
+  gap: 15%;
+  border-bottom: 2px solid #e5e5e5;
+}
+
+.topPart > ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15%;
+  font-size: 150%;
+}
+
+.topPart > ul svg {
+  color: black;
+}
+
+.topPart > ul > select {
+  padding-left: 3%;
+  border: none;
+  font-size: 60%;
+}
+
+.topPart > h1 {
+  position: relative;
+  left: 7%;
+}
+
+header > ul {
+  text-align: center;
+  padding: 1.5%;
+  border-bottom: 2px solid #e5e5e5;
+}
+
+header > ul > a {
+  color: #111;
+  text-decoration: none;
+  margin: 2%;
+  font-family: sans-serif;
+  font-size: 115%;
+}
+
+.hamburger {
+  display: none;
+}
+
+@media (max-width: 850px) {
+  .iconAndInfo {
+    font-size: 90%;
+  }
+
+  .icon {
+    font-size: 18px;
+  }
+
+  .main-section .iconAndInfo:nth-child(3) {
+    display: none;
+  }
+
+  .topPart > ul {
+    gap: 8%;
+  }
+
+  .topPart > ul > select {
+    padding-left: 0%;
+    font-size: 13px;
+  }
+
+  .topPart > h1 {
+    font-size: 150%;
+  }
+
+  .topPart ul img {
+    width: 18px;
+  }
+
+  header > ul > a {
+    font-size: 80%;
+  }
+}
+
+@media (max-width: 450px) {
+  .iconAndInfo {
+    font-size: 60%;
+    gap: 5px;
+  }
+
+  .icon {
+    font-size: 13px;
+  }
+
+  .main-section .iconAndInfo:nth-child(2) {
+    display: none;
+  }
+
+  .topPart > img {
+    width: 30px;
+    position: relative;
+    left: 28px;
+  }
+
+  .topPart > h1 {
+    font-size: 145%;
+    left: 5%;
+  }
+
+  .topPart > ul {
+    gap: 15%;
+  }
+
+  .topPart > ul img:last-of-type,
+  .topPart > ul select,
+  header > ul {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+    font-size: 180%;
+    position: absolute;
+    left: 3%;
+  }
+}
