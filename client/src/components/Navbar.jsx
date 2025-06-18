@@ -5,14 +5,20 @@ import heart from "../assets/heart.svg";
 import search from "../assets/search-normal.svg";
 import shoppingBag from "../assets/shopping-bag.svg";
 import { RxHamburgerMenu } from "react-icons/rx";
-import './navbar.css' 
+import "./navbar.css";
+import { useState } from "react";
 
 const Navbar = () => {
+  const [burger, setBurger] = useState(false);
+
   return (
     <header>
       <TopNav />
       <div className="topPart">
-      <RxHamburgerMenu className="hamburger"/>
+        <RxHamburgerMenu
+          onClick={() => setBurger(!burger)}
+          className="hamburger"
+        />
         <img width={40} height={40} src={logo} alt="LOGO" />
         <h1>LOGO</h1>
         <ul>
@@ -27,7 +33,7 @@ const Navbar = () => {
           </select>
         </ul>
       </div>
-      <ul>
+      <ul className={`${burger ? "pageList" : ""}`}>
         <a href="/">SHOP</a>
         <a href="/">SKILLS</a>
         <a href="/">STORIES</a>

@@ -48,11 +48,12 @@ const SideOptionCom = ({ title, dataArr = 0 }) => {
   );
 };
 
-const SideBar = ({ isVisible }) => {
+const SideBar = ({ isVisible ,sideView}) => {
   if (isVisible) return null;
-
+console.log(sideView)
   return (
-    <aside>
+    <>
+    {sideView && <aside>
       <div className="item-center sideBar">
         <label className="custom-checkbox">
           <input type="checkbox" />
@@ -71,7 +72,8 @@ const SideBar = ({ isVisible }) => {
       <SideOptionCom title="SUITABLE FOR" />
       <SideOptionCom title="RAW MATERIALS" />
       <SideOptionCom title="PATTERN" />
-    </aside>
+    </aside>}
+    </>
   );
 };
 

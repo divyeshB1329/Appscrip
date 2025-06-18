@@ -71,7 +71,13 @@ aside {
 }
 
 @media (max-width: 650px) {
-  aside {
-    display: none;
+  aside{
+    position: absolute;
+    width: 80%;
+    background-color: white;
   }
+
+
+
+
 }

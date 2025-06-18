@@ -6,7 +6,7 @@ import {
   MdKeyboardArrowUp,
 } from "react-icons/md";
 
-const HeroNav = ({setSortOrder, onToggle, view,items }) => {
+const HeroNav = ({setSortOrder, onToggle, view,items,visible,tfdata}) => {
   const [shortData, setShortData] = useState(false);
   function toggleSection() {
     setShortData(!shortData);
@@ -19,7 +19,7 @@ const HeroNav = ({setSortOrder, onToggle, view,items }) => {
   }
   return (
     <section>
-      <strong className="responsiveFilter">Filter</strong>
+      <strong className="responsiveFilter" onClick={()=>visible(!tfdata)}>Filter</strong>
       <div className="item-center hideUnhideSec">
         <strong>{items.length} ITEMS</strong>
         {view ? (

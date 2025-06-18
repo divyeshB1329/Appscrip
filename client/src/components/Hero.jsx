@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 
 const Hero = () => {
   let [view, setView] = useState(false);
+  let [resView, setResView] = useState(false);
   let [product, setProduct] = useState([]);
   let [sortOrder, setSortOrder] = useState("");
 
@@ -13,7 +14,6 @@ const Hero = () => {
     fetch("https://appscrip-tqk9.onrender.com/api/products")
       .then((res) => res.json())
       .then((data) => setProduct(data));
-      console.log(sortOrder)
   }, []);
 
   let toggleSidebar = () => {
@@ -30,9 +30,9 @@ const Hero = () => {
 
   return (
     <main className="mainSec item-center">
-      <HeroNav setSortOrder={setSortOrder} items={product} view={view} onToggle={toggleSidebar} />
+      <HeroNav setSortOrder={setSortOrder} tfdata={resView} visible={setResView} items={product} view={view} onToggle={toggleSidebar} />
       <section className="sideNproductSec">
-        <SideBar isVisible={view} />
+        <SideBar isVisible={view} sideView={resView}/>
         <Product style={view} items={sortedProducts} />
       </section>
     </main>
