@@ -7,11 +7,13 @@ import shoppingBag from "../assets/shopping-bag.svg";
 import { RxHamburgerMenu } from "react-icons/rx";
 import "./navbar.css";
 import { useState } from "react";
+import Search from "./Search";
 
-const Navbar = () => {
+const Navbar = ({searchFirstState,searchSecState,product}) => {
   const [burger, setBurger] = useState(false);
 
   return (
+    <>
     <header>
       <TopNav />
       <div className="topPart">
@@ -22,10 +24,10 @@ const Navbar = () => {
         <img width={40} height={40} src={logo} alt="LOGO" />
         <h1>LOGO</h1>
         <ul>
-          <img src={search} alt="" />
-          <img src={heart} alt="" />
-          <img src={shoppingBag} alt="" />
-          <img src={profile} alt="" />
+          <img onClick={()=>searchSecState(!searchFirstState)} src={search} alt="search" />
+          <img src={heart} alt="Your Fav.. icon" />
+          <img src={shoppingBag} alt="shopping-Bag" />
+          <img src={profile} alt="profile-picture" />
           <select id="lag">
             <option value="english">Eng</option>
             <option value="hindi">Hin</option>
@@ -41,6 +43,10 @@ const Navbar = () => {
         <a href="/">CONTACT US</a>
       </ul>
     </header>
+    {searchFirstState && 
+    <Search product={product} searchOne={searchFirstState} searchTwo={searchSecState}/>
+    }
+    </>
   );
 };
 

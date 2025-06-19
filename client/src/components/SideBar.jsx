@@ -50,7 +50,6 @@ const SideOptionCom = ({ title, dataArr = 0 }) => {
 
 const SideBar = ({ isVisible ,sideView}) => {
   if (isVisible) return null;
-console.log(sideView)
   return (
     <>
     {sideView && <aside>

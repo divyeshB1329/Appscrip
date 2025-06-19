@@ -4,17 +4,12 @@ import "./hero.css";
 import SideBar from "./SideBar";
 import { useEffect, useState } from "react";
 
-const Hero = () => {
+const Hero = ({product}) => {
   let [view, setView] = useState(false);
   let [resView, setResView] = useState(false);
-  let [product, setProduct] = useState([]);
   let [sortOrder, setSortOrder] = useState("");
 
-  useEffect(() => {
-    fetch("https://appscrip-tqk9.onrender.com/api/products")
-      .then((res) => res.json())
-      .then((data) => setProduct(data));
-  }, []);
+  
 
   let toggleSidebar = () => {
     setView((e) => !e);

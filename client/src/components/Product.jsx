@@ -3,9 +3,7 @@ import heartIcon from "../assets/heart.svg";
 import fillHeartIcon from "../assets/fillHeart.svg";
 import { useState } from "react";
 
-
 const Product = ({ style, items }) => {
-
   const [likedItems, setLikedItems] = useState({});
 
   const toggleHeart = (id) => {
